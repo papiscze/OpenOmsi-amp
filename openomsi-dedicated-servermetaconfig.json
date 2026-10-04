@@ -1,0 +1,35 @@
+[
+  {
+    "ConfigFile": "server.cfg",
+    "ConfigType": "kvp",
+    "ConfigFormat": "{0} = {1}",
+    "AutoMap": false,
+    "Subsections": [
+      {
+        "Heading": "$root",
+        "SettingMappings": {
+          "ServerName": "name",
+          "Motd": "motd",
+          "Map": "map",
+          "Date": "date",
+          "Time": "time",
+          "Weather": "weather",
+          "Traffic": "traffic",
+          "Timetable": "timetable",
+          "Passengers": "passengers",
+          "Port": "port",
+          "WebPort": "web_port",
+          "MaxPlayers": "max_players",
+          "Tunnel": "tunnel",
+          "Radius": "radius",
+          "SharePositions": "share_positions",
+          "AdminPassword": "admin_password",
+          "VoiceChannel": "voice_channel",
+          "VoiceChannelPassword": "voice_channel_password",
+          "VoiceServerUid": "voice_server_uid",
+          "VoiceRange": "voice_range"
+        }
+      }
+    ]
+  }
+]

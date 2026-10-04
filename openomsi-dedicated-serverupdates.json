@@ -1,0 +1,26 @@
+[
+  {
+    "UpdateStageName": "Fetch openOMSI dedicated server (Linux x64)",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "GithubRelease",
+    "UpdateSourceArgs": "openOMSI-Project/openOMSI",
+    "UpdateSourceData": "openOMSI-{{ServerVersion}}-server-linux-x64.zip",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true
+  },
+  {
+    "UpdateStageName": "Fetch openOMSI dedicated server (Windows x64)",
+    "UpdateSourcePlatform": "Windows",
+    "UpdateSource": "GithubRelease",
+    "UpdateSourceArgs": "openOMSI-Project/openOMSI",
+    "UpdateSourceData": "openOMSI-{{ServerVersion}}-server-windows-x64.zip",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true
+  },
+  {
+    "UpdateStageName": "Mark server binary executable",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "openomsi"
+  }
+]
