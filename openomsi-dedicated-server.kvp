@@ -1,6 +1,8 @@
 Meta.DisplayName=openOMSI Dedicated Server
 Meta.Description=openOMSI dedicated server - headless OMSI 2 multiplayer host (requires the original OMSI 2 content)
-Meta.OS=3
+Meta.OS=Windows, Linux
+Meta.AarchSupport=Unknown
+Meta.Arch=x86_64
 Meta.Author=Roman
 Meta.URL=https://github.com/openOMSI-Project/openOMSI
 Meta.DisplayImageSource=https://openomsi-project.github.io/openOMSI/assets/logos/openomsi-wordmark-light.svg
