@@ -1,1 +1,0 @@
-# OpenOmsi-ampserver
