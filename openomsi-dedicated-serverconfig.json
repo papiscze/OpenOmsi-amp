@@ -1,0 +1,231 @@
+[
+  {
+    "DisplayName": "openOMSI version",
+    "Description": "The release version to download, e.g. 0.1.808 (see https://github.com/openOMSI-Project/openOMSI/releases for the latest). Change this and click Update to switch versions.",
+    "FieldName": "ServerVersion",
+    "Category": "General",
+    "InputType": "text",
+    "IncludeInCommandLine": false,
+    "Required": true,
+    "DefaultValue": "0.1.808"
+  },
+  {
+    "DisplayName": "Software rendering backend",
+    "Description": "This server has no window and draws nothing, but still needs a graphics backend to initialize. On a host with no GPU (e.g. a bare-metal server), pick a Mesa software renderer: Vulkan (lavapipe) is the default and usually fastest; OpenGL (llvmpipe) is a fallback if Vulkan initialization fails. Both are installed automatically. If you have a real GPU available to the container, you generally do not need to change this.",
+    "FieldName": "GraphicsBackend",
+    "Category": "General",
+    "InputType": "enum",
+    "IncludeInCommandLine": false,
+    "EnumValues": {
+      "vulkan": "Vulkan (lavapipe) - default",
+      "gl": "OpenGL (llvmpipe) - fallback"
+    },
+    "DefaultValue": "vulkan"
+  },
+  {
+    "DisplayName": "OMSI 2 installation path",
+    "Description": "Absolute path to the original OMSI 2 installation that this server will use for its map, vehicle and mod content (the folder containing Omsi.exe, maps and Vehicles).",
+    "FieldName": "OMSI2Path",
+    "Category": "General",
+    "InputType": "text",
+    "IncludeInCommandLine": false,
+    "Required": true,
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Server name",
+    "Description": "Shown in the launcher's server list and to players when they join.",
+    "FieldName": "ServerName",
+    "ParamFieldName": "name",
+    "Category": "General",
+    "InputType": "text",
+    "DefaultValue": "openOMSI Server"
+  },
+  {
+    "DisplayName": "MOTD",
+    "Description": "Message of the day shown to joining players.",
+    "FieldName": "Motd",
+    "ParamFieldName": "motd",
+    "Category": "General",
+    "InputType": "text",
+    "DefaultValue": "Welcome!"
+  },
+  {
+    "DisplayName": "Map",
+    "Description": "Path to the map's global.cfg, relative to the OMSI 2 folder, e.g. maps/Berlin-Spandau/global.cfg.",
+    "FieldName": "Map",
+    "ParamFieldName": "map",
+    "Category": "General",
+    "InputType": "text",
+    "Required": true,
+    "DefaultValue": "maps/Grundorf/global.cfg"
+  },
+  {
+    "DisplayName": "Date",
+    "Description": "The world date the session starts at.",
+    "FieldName": "Date",
+    "ParamFieldName": "date",
+    "Category": "World",
+    "InputType": "text",
+    "DefaultValue": "2026-01-01"
+  },
+  {
+    "DisplayName": "Time",
+    "Description": "The world clock time the session starts at.",
+    "FieldName": "Time",
+    "ParamFieldName": "time",
+    "Category": "World",
+    "InputType": "text",
+    "DefaultValue": "08:00"
+  },
+  {
+    "DisplayName": "Weather",
+    "Description": "A weather file (e.g. Weather/#CAVOK.owt) or 'auto' to cycle weather automatically.",
+    "FieldName": "Weather",
+    "ParamFieldName": "weather",
+    "Category": "World",
+    "InputType": "text",
+    "DefaultValue": "auto"
+  },
+  {
+    "DisplayName": "Traffic density",
+    "Description": "How much AI traffic the world simulates.",
+    "FieldName": "Traffic",
+    "ParamFieldName": "traffic",
+    "Category": "World",
+    "InputType": "number",
+    "minValue": "0",
+    "maxValue": "100",
+    "DefaultValue": "50"
+  },
+  {
+    "DisplayName": "Timetable",
+    "Description": "Enables simulated timetable buses.",
+    "FieldName": "Timetable",
+    "ParamFieldName": "timetable",
+    "Category": "World",
+    "InputType": "checkbox",
+    "EnumValues": { "False": "0", "True": "1" },
+    "DefaultValue": "True"
+  },
+  {
+    "DisplayName": "Passengers",
+    "Description": "Enables simulated passengers at stops and aboard buses.",
+    "FieldName": "Passengers",
+    "ParamFieldName": "passengers",
+    "Category": "World",
+    "InputType": "checkbox",
+    "EnumValues": { "False": "0", "True": "1" },
+    "DefaultValue": "True"
+  },
+  {
+    "DisplayName": "Game port (UDP)",
+    "Description": "The UDP port players connect to directly.",
+    "FieldName": "Port",
+    "ParamFieldName": "port",
+    "Category": "Network",
+    "InputType": "number",
+    "minValue": "1",
+    "maxValue": "65535",
+    "DefaultValue": "27015"
+  },
+  {
+    "DisplayName": "Web port",
+    "Description": "HTTP/WebSocket port used for browser-based players, /status, /icon.png, /admin and /players.",
+    "FieldName": "WebPort",
+    "ParamFieldName": "web_port",
+    "Category": "Network",
+    "InputType": "number",
+    "minValue": "1",
+    "maxValue": "65535",
+    "DefaultValue": "27016"
+  },
+  {
+    "DisplayName": "Max players",
+    "Description": "Maximum number of concurrent players.",
+    "FieldName": "MaxPlayers",
+    "ParamFieldName": "max_players",
+    "Category": "Network",
+    "InputType": "number",
+    "minValue": "1",
+    "maxValue": "64",
+    "DefaultValue": "16"
+  },
+  {
+    "DisplayName": "Enable Cloudflare quick tunnel",
+    "Description": "Starts a free cloudflared quick tunnel so players can join over WebSocket without port forwarding.",
+    "FieldName": "Tunnel",
+    "ParamFieldName": "tunnel",
+    "Category": "Network",
+    "InputType": "checkbox",
+    "EnumValues": { "False": "0", "True": "1" },
+    "DefaultValue": "False"
+  },
+  {
+    "DisplayName": "Interest radius",
+    "Description": "Tile streaming radius around each player's bus, in metres. 0 loads the whole map.",
+    "FieldName": "Radius",
+    "ParamFieldName": "radius",
+    "Category": "Network",
+    "InputType": "number",
+    "minValue": "0",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Share player positions",
+    "Description": "Enables GET /players (live map data: position, heading, speed). Off by default for privacy.",
+    "FieldName": "SharePositions",
+    "ParamFieldName": "share_positions",
+    "Category": "Network",
+    "InputType": "checkbox",
+    "EnumValues": { "False": "0", "True": "1" },
+    "DefaultValue": "False"
+  },
+  {
+    "DisplayName": "Admin password",
+    "Description": "Required to use POST /admin for remote admin commands (clock, weather, say, kick). Leave blank to disable remote admin.",
+    "FieldName": "AdminPassword",
+    "ParamFieldName": "admin_password",
+    "Category": "Administration",
+    "InputType": "password",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Voice channel",
+    "Description": "GreenTeaSpeak channel id or name that players are moved into for proximity voice chat. Leave blank to disable voice chat.",
+    "FieldName": "VoiceChannel",
+    "ParamFieldName": "voice_channel",
+    "Category": "Voice Chat",
+    "InputType": "text",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Voice channel password",
+    "Description": "Sent to every joining player so their game can enter the voice channel. Keeps strangers on the voice server out.",
+    "FieldName": "VoiceChannelPassword",
+    "ParamFieldName": "voice_channel_password",
+    "Category": "Voice Chat",
+    "InputType": "password",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Voice server UID",
+    "Description": "The unique id of the GreenTeaSpeak voice server (shown in GreenTeaSpeak's server info panel). Required for voice chat to work.",
+    "FieldName": "VoiceServerUid",
+    "ParamFieldName": "voice_server_uid",
+    "Category": "Voice Chat",
+    "InputType": "text",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Voice range (metres)",
+    "Description": "Maximum distance players can hear each other, muffled through bus bodywork.",
+    "FieldName": "VoiceRange",
+    "ParamFieldName": "voice_range",
+    "Category": "Voice Chat",
+    "InputType": "number",
+    "minValue": "1",
+    "DefaultValue": "20",
+    "Suffix": "m"
+  }
+]
