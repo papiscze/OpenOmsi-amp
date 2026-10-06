@@ -23,16 +23,16 @@ Meta.ConfigVersion=1.0
 Meta.AppConfigId=14e47687-47d2-420f-a511-c62a8104623e
 
 App.DisplayName=openOMSI Dedicated Server
-App.RootDir=./
-App.BaseDirectory=./
-App.WorkingDir=./
+App.RootDir=./GenericApplication/
+App.BaseDirectory=./GenericApplication/
+App.WorkingDir=./GenericApplication/
 App.ExecutableWin=openomsi.exe
 App.ExecutableLinux=openomsi
 App.Compatibility=0
 App.ForceUpdate=False
 App.ForceUpdateReason=
 
-App.CommandLineArgs=--root "{{OMSI2Path}}" --server "{{$FullWorkingDir}}server.cfg"
+App.CommandLineArgs=--root "{{OMSI2Path}}" --server "./server.cfg"
 App.CommandLineParameterFormat=--{0} "{1}"
 App.CommandLineParameterDelimiter= 
 
