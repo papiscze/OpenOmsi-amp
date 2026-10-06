@@ -23,9 +23,9 @@ Meta.ConfigVersion=1.0
 Meta.AppConfigId=14e47687-47d2-420f-a511-c62a8104623e
 
 App.DisplayName=openOMSI Dedicated Server
-App.RootDir=./openomsi-dedicated-server/
-App.BaseDirectory=./openomsi-dedicated-server/
-App.WorkingDir=./openomsi-dedicated-server/
+App.RootDir=./
+App.BaseDirectory=./
+App.WorkingDir=./
 App.ExecutableWin=openomsi.exe
 App.ExecutableLinux=openomsi
 App.Compatibility=0
