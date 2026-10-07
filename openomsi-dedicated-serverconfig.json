@@ -37,7 +37,7 @@
   },
   {
     "DisplayName": "OMSI 2 installation path",
-    "Description": "Absolute path to the original OMSI 2 installation that this server will use for its map, vehicle and mod content (the folder containing Omsi.exe, maps and Vehicles).",
+    "Description": "Path to the original OMSI 2 installation that this server will use for its map, vehicle and mod content (the folder containing Omsi.exe, maps and Vehicles). Relative to this instance's working directory, e.g. ./omsi2 if you uploaded the installation into a folder named omsi2 here; an absolute path also works.",
     "FieldName": "OMSI2Path",
     "Category": "General",
     "InputType": "text",
@@ -74,6 +74,15 @@
     "DefaultValue": "maps/Grundorf/global.cfg"
   },
   {
+    "DisplayName": "Allowed vehicles",
+    "Description": "Buses players may drive, separated by ; (e.g. Vehicles/MAN_SD200/MAN_SD77.bus). Leave blank to allow every bus installed on the server. The players' vehicle menu offers only these, and a player driving another bus is sent away.",
+    "FieldName": "Vehicles",
+    "ParamFieldName": "vehicles",
+    "Category": "General",
+    "InputType": "text",
+    "DefaultValue": ""
+  },
+  {
     "DisplayName": "Date",
     "Description": "The world date the session starts at.",
     "FieldName": "Date",
@@ -92,6 +101,27 @@
     "DefaultValue": "08:00"
   },
   {
+    "DisplayName": "Clock speed",
+    "Description": "How fast the world clock runs: 1 = real time, 2 = twice as fast, up to 30. Ignored when 'Follow real time' is on.",
+    "FieldName": "TimeSpeed",
+    "ParamFieldName": "time_speed",
+    "Category": "World",
+    "InputType": "number",
+    "MinValue": "1",
+    "MaxValue": "30",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Follow real time",
+    "Description": "The world clock follows this machine's real date and time. Date/Time above then only set the very first moment, and Clock speed and an admin's clock command are ignored.",
+    "FieldName": "RealTime",
+    "ParamFieldName": "real_time",
+    "Category": "World",
+    "InputType": "checkbox",
+    "EnumValues": { "False": "0", "True": "1" },
+    "DefaultValue": "False"
+  },
+  {
     "DisplayName": "Weather",
     "Description": "A weather file (e.g. Weather/#CAVOK.owt) or 'auto' to cycle weather automatically.",
     "FieldName": "Weather",
@@ -99,6 +129,25 @@
     "Category": "World",
     "InputType": "text",
     "DefaultValue": "auto"
+  },
+  {
+    "DisplayName": "Sync weather to real METAR",
+    "Description": "The weather follows the real METAR report of an airport, refreshed every ten minutes. Weather above then only sets the first moment, and admins cannot change it.",
+    "FieldName": "MetarSync",
+    "ParamFieldName": "metar_sync",
+    "Category": "World",
+    "InputType": "checkbox",
+    "EnumValues": { "False": "0", "True": "1" },
+    "DefaultValue": "False"
+  },
+  {
+    "DisplayName": "METAR station (ICAO code)",
+    "Description": "Airport ICAO code to sync weather from, e.g. EDDB. Leave blank to use the one nearest the map. Only used when 'Sync weather to real METAR' is on.",
+    "FieldName": "MetarStation",
+    "ParamFieldName": "metar_station",
+    "Category": "World",
+    "InputType": "text",
+    "DefaultValue": ""
   },
   {
     "DisplayName": "Traffic density",

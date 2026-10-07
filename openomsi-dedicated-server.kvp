@@ -64,7 +64,7 @@ App.RemoteAdminPassword=
 App.UseRandomAdminPassword=False
 App.AdminLoginTransform=None
 
-App.MaxUsers=16
+App.MaxUsers=64
 App.AdminMethod=STDIO
 
 App.UDPLogger=False
