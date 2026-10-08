@@ -122,6 +122,15 @@
     "DefaultValue": "False"
   },
   {
+    "DisplayName": "Time zone",
+    "Description": "IANA time zone the server's clock uses (e.g. Europe/Prague, Europe/Berlin, UTC). Matters mainly with 'Follow real time' on: the container usually runs in UTC by default, so the in-game clock can otherwise be hours off from your own.",
+    "FieldName": "TimeZone",
+    "Category": "World",
+    "InputType": "text",
+    "IncludeInCommandLine": false,
+    "DefaultValue": "UTC"
+  },
+  {
     "DisplayName": "Weather",
     "Description": "A weather file (e.g. Weather/#CAVOK.owt) or 'auto' to cycle weather automatically.",
     "FieldName": "Weather",
@@ -204,8 +213,8 @@
   },
   {
     "DisplayName": "Max players",
-    "Description": "Maximum number of concurrent players.",
-    "FieldName": "MaxPlayers",
+    "Description": "Maximum number of concurrent players. Also sets AMP's own Active Users limit for this instance.",
+    "FieldName": "$MaxUsers",
     "ParamFieldName": "max_players",
     "Category": "Network",
     "InputType": "number",

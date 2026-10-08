@@ -38,7 +38,7 @@ App.CommandLineParameterDelimiter=
 
 App.AppSettings={"OMSI2Path": "", "ServerVersion": "0.1.808", "GraphicsBackend": "vulkan"}
 
-App.EnvironmentVariables={"WGPU_BACKEND": "{{GraphicsBackend}}", "LIBGL_ALWAYS_SOFTWARE": "1", "LP_NUM_THREADS": "4"}
+App.EnvironmentVariables={"WGPU_BACKEND": "{{GraphicsBackend}}", "LIBGL_ALWAYS_SOFTWARE": "1", "LP_NUM_THREADS": "4", "TZ": "{{TimeZone}}"}
 
 App.ExitMethod=CtrlC
 App.ExitString=
@@ -64,7 +64,7 @@ App.RemoteAdminPassword=
 App.UseRandomAdminPassword=False
 App.AdminLoginTransform=None
 
-App.MaxUsers=64
+App.MaxUsers=16
 App.AdminMethod=STDIO
 
 App.UDPLogger=False
@@ -80,3 +80,5 @@ App.SmartExcludeSupported=True
 App.SmartExcludeExemptions=["*.cfg","*.log","*.installedversion","server-icon.png"]
 
 Console.DownloadProgressRegex=^(\[=*\s*\] (?<percent>[\d.]+%) \((?<progressValue>[\d.]*) (?<progressUnits>[KMG]B) \/ (?<totalValue>[\d.]*) (?<totalUnits>[KMG]B)\)|#*\s*(?<percent>[\d.]+%))$
+Console.UserJoinRegex=^\[[\d\-T:]+Z\s+\w+\s+[\w:]+\]\s+LAN: player (?<userid>\d+) '(?<username>[^']+)' joined from (?<endpoint>[\d.]+:\d+) with .*$
+Console.UserLeaveRegex=^\[[\d\-T:]+Z\s+\w+\s+[\w:]+\]\s+LAN: player (?<userid>\d+) '(?<username>[^']+)' left$
