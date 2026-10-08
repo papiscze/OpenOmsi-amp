@@ -1,9 +1,9 @@
 {
-	"id": "ec280171-c67b-4cf8-923f-dc27fea91ee1",
-	"authors": ["CubeCoders Limited", "AMP Community"],
-	"origin": "https://github.com/CubeCoders/AMPTemplates.git",
-	"url": "https://github.com/CubeCoders/AMPTemplates",
+	"id": "1853f3ed-1252-4b5d-9d08-99d085fddd5f",
+	"authors": ["Roman (papiscze)"],
+	"origin": "https://github.com/papiscze/OpenOmsi-amp.git",
+	"url": "https://github.com/papiscze/OpenOmsi-amp",
 	"imagefile": "",
-	"prefix": "",
+	"prefix": "openomsi",
 	"repotype": "AppTemplates"
 }
