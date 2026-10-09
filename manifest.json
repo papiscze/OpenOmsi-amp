@@ -4,6 +4,6 @@
 	"origin": "https://github.com/papiscze/OpenOmsi-amp.git",
 	"url": "https://github.com/papiscze/OpenOmsi-amp",
 	"imagefile": "",
-	"prefix": "",
+	"prefix": "openomsi",
 	"repotype": "AppTemplates"
 }

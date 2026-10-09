@@ -107,8 +107,8 @@
     "ParamFieldName": "time_speed",
     "Category": "World",
     "InputType": "number",
-    "MinValue": "1",
-    "MaxValue": "30",
+    "minValue": "1",
+    "maxValue": "30",
     "DefaultValue": "1"
   },
   {
@@ -165,8 +165,8 @@
     "ParamFieldName": "traffic",
     "Category": "World",
     "InputType": "number",
-    "MinValue": "0",
-    "MaxValue": "100",
+    "minValue": "0",
+    "maxValue": "100",
     "DefaultValue": "50"
   },
   {
@@ -196,8 +196,8 @@
     "ParamFieldName": "port",
     "Category": "Network",
     "InputType": "number",
-    "MinValue": "1",
-    "MaxValue": "65535",
+    "minValue": "1",
+    "maxValue": "65535",
     "DefaultValue": "27015"
   },
   {
@@ -207,19 +207,19 @@
     "ParamFieldName": "web_port",
     "Category": "Network",
     "InputType": "number",
-    "MinValue": "1",
-    "MaxValue": "65535",
+    "minValue": "1",
+    "maxValue": "65535",
     "DefaultValue": "27016"
   },
   {
     "DisplayName": "Max players",
-    "Description": "Maximum number of concurrent players. Also sets AMP's own Active Users limit for this instance.",
-    "FieldName": "$MaxUsers",
+    "Description": "Maximum number of concurrent players.",
+    "FieldName": "MaxPlayers",
     "ParamFieldName": "max_players",
     "Category": "Network",
     "InputType": "number",
-    "MinValue": "1",
-    "MaxValue": "64",
+    "minValue": "1",
+    "maxValue": "64",
     "DefaultValue": "16"
   },
   {
@@ -239,7 +239,7 @@
     "ParamFieldName": "radius",
     "Category": "Network",
     "InputType": "number",
-    "MinValue": "0",
+    "minValue": "0",
     "DefaultValue": "0"
   },
   {
@@ -295,7 +295,7 @@
     "ParamFieldName": "voice_range",
     "Category": "Voice Chat",
     "InputType": "number",
-    "MinValue": "1",
+    "minValue": "1",
     "DefaultValue": "20",
     "Suffix": "m"
   }
